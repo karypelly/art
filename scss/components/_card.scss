@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.card {
+  padding: rem(48) rem(24);
+
+  @include breakpoint-up("tiny") {
+    padding: rem(85) rem(28);
+  }
+
+  @include breakpoint-up("very-small") {
+    padding: rem(65) rem(48);
+  }
+}
+
+.card__title {
+  margin-bottom: rem(24);
+  font-size: rem(50);
+  line-height: 0.9;
+  text-transform: uppercase;
+
+  @include breakpoint-up("very-small") {
+    font-size: rem(60);
+  }
+}
+
+.card--black {
+  background-color: $black;
+  color: $white;
+}

@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+.area {
+  background-color: $black;
+  padding: rem(56) 0;
+  color: $white;
+
+  @include breakpoint-up("tiny") {
+    padding: rem(88) 0;
+  }
+}
+
+.area .container {
+  @include breakpoint-up("tiny") {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.area__title {
+  font-size: rem(50);
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include breakpoint-up("tiny") {
+    flex-basis: rem(225);
+    font-size: rem(55);
+  }
+
+  @include breakpoint-up("very-small") {
+    flex-basis: rem(350);
+    font-size: rem(70);
+  }
+}
+
+.area__wrapper {
+  margin-top: rem(48);
+
+  @include breakpoint-up("tiny") {
+    flex-basis: rem(400);
+    margin: 0;
+  }
+
+  @include breakpoint-up("very-small") {
+    flex-basis: rem(540);
+  }
+}
+
+.area__street {
+  color: $gold;
+  font-weight: 900;
+  font-size: rem(32);
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+}
+
+.area__details {
+  margin: rem(20) 0;
+}
