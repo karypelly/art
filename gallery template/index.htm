@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<!-- insert your own name here +++++++++++++++++++++++++++++++++++++++++++-->
+<meta name="description" content="John Smith's Photo Gallery">  
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- to set the initial browser at 100% zoom -->
+
+<!-- insert your own name here ++++++++++++++++++++++++++++++++++++++++++++-->
+<title>Welcome to John Smith's Gallery</title> 
+
+<script type="text/javascript">
+//update this when adding, deleting or changing images:
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+var img0 = {name:"Young Eurasian Eagle Owl", place_date: "Port Dover, Ontario.", cright:"2016",
+	src:"images/large/owl.jpg"};
+var img1 = {name:"Gigi the Cat", place_date: "Ontario, Canadda, 1996.", cright:"2006.",
+	src:"images/large/cat.jpg"};
+var img2 = {name:"Cherry Blossoms, Early Spring", place_date: "Hamilton, Ontario", cright:"2015",
+	src:"images/large/cherry.jpg"};
+	
+	
+//update this when adding new images/deleting old images
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+var allimgs = [img0,img1,img2];
+
+</script>
+<link rel="stylesheet" type="text/css" href="index_style.css"> <!-- the common style sheet for index.htm, index_deutsch.htm and index_francais.htm -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- get jquery -->
+<script type="text/javascript" src="index_javascript.js"></script>
+
+</head>
+
+<body oncontextmenu="return false" >   <!-- on a right click (except on a valid control), nothing happens --> 
+
+<p></p>
+<br>
+<!-- insert your own name here +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<p id="welcome" > Welcome to John Smith's Virtual Gallery</p>
+
+<br>
+<p class="small" >
+
+	<input class="butn1" title="view thumbnails (page bottom)" id="Button0" onclick="grid_view();" type="button" value="&#9638">
+	&nbsp;&nbsp;
+	<input class="butn1" title="go to first image" id="Button1" onclick="first_image();" type="button" value="&lt;&lt;" >
+	<input class="butn1" title="previous image" id="Button2" onclick="prev_image();" type="button" value="&lt;" >
+	&nbsp;&nbsp;
+	<input class="butn1" title="next image" id="Button4" onclick="next_image();" type="button" value="&gt;" >
+	<input class="butn1" title="last image" id="Button5" onclick="last_image();" type="button" value="&gt;&gt;" > &nbsp;&nbsp;</p>
+
+	<p>
+		<a class="butn1" title="guest book/contact us" id="guest_book" href="contact_us.php"> Guest Book/Contact Us</a>
+	</p>
+
+<!--- Display the first image --->
+<!-- Update the next 2 lines for your own name/first image to display ++++++++++++++++++++++++++++++++++++++++++++-->
+<p id="imgline1"  > &quot;Young Eurasian Eagle Owl&quot;,&nbsp;Ontario Canada, 2013.</p>
+<p id="imgline2">&copy; Peter Staadecker, 2013.</p>
+<p   ><br><br></p>
+<div id="img_div">
+	<p id="img" class="imgfade" onclick="nxt_or_prev_image(event)" > 
+		<!-- Update the next line for your own first image to display ++++++++++++++++++++++++++++++++++++++++++++--> 
+		<img src="images/large/owl.jpg" alt="winter photo">
+	</p>
+</div>
+<p   >&nbsp;</p>
+
+
+<div class = "thumbs_div imgfade" id ="thumbs_div">  
+	<TABLE id="thumbs_table" class="imgfade">
+		<TR id="th_row1" class="imgfade thumb_row">
+		
+<!-- placeholders for Javascript. Add one more of the same line every time you add an image to the gallery ++++++++++-->		
+		<td onclick="bigimage(this)">img src="images/thumbs/owl.jpg" </td>
+		<td onclick="bigimage(this)">img src="images/thumbs/owl.jpg" </td>
+		<td onclick="bigimage(this)">img src="images/thumbs/owl.jpg" </td>
+				
+</tr>
+</TABLE></div>
+
+
+</body>
+</html>

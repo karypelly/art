@@ -1,0 +1,60 @@
+﻿/* this is the common style sheet for index.htm, index_deutsch.htm and index_francais.htm */
+
+
+
+body {
+	background-color: #202020;
+	color: #FFFF90;
+	font-size: medium;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+a:visited {color: #909760;}
+a:active {color: #0000FF;}	
+a:link {color: #ffc800;}	
+html { min-height: 100.2%; margin-bottom: 1px; } /*forces scroll bar onto right hand edge of page, so that it doesn't flicker in and out on pages that do/don't need it */
+
+
+
+img {  max-width: 100%; 
+} 
+
+/* for controls */ 
+p.small {
+	height: 22px;
+}
+
+/*for copyright */
+p#copyright{
+	font-size: small;
+}
+
+
+.butn1 {height: 22px; border-color : #000000;  background-color: #303030; font-size:16px; 	width: 32px; color:#777738;	}
+		
+#guest_book, #other_language1, #other_language2 {height: 22px; border-color : #000000;  background-color: #303030; font-size:16px;	width: 200px; color:#777738;}
+
+input[type=button]:disabled {color:#272727;}	
+	
+
+#img_div {
+	min-height:190px; max-width: 100%;
+}
+
+td {max-height: 275px; padding:10px; min-width:200px; min-height:200px;} /* in case @media not read by an old browser version */
+
+@media (max-width: 1000px) {
+	.thumbs_div{ text-align:center;  width:100%;   margin-left:auto; margin-right:auto;   overflow:auto;  }
+	.thumb_row{ text-align:center;  width:100%;   margin-left:auto;  margin-right:auto; overflow:auto;   }
+	 td {max-height: 275px; padding:10px; min-width:100px; min-height:100px;}
+}
+@media (min-width: 1001px) {
+
+	.thumbs_div{ text-align:center;  width:50%;   margin-left:auto; margin-right:auto;   overflow:auto;  }
+	.thumb_row{ text-align:center;  width:50%;   margin-left:auto;  margin-right:auto; overflow:auto; }
+	 td {max-height: 275px; padding:10px; min-width:200px; min-height:200px;}
+}
+
